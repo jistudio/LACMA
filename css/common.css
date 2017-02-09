@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* 나눔고딕 폰트 */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+
+
+/* 모바일 코딩 필수 공통영역 */
+body, input, textarea, select, button, table, footer, p {
+	font-family: 'Droid Serif','Roboto', 'Roboto Condensed', "Nanum Gothic", serif;
+	font-size:1em;
+	color:#000;
+	text-shadow:none;
+	background:#fff;
+	line-height:1.75em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{margin:0;padding:0;-webkit-text-size-adjust:none; box-sizing: border-box; 
+	 }
+
+
+
+
+
+
+img{
+	
+	vertical-align:top;}
+
+
+
+
+
+img, fieldset{border:0}
+ul, ol, li, dl{list-style:none}
+h1, h2, h3, h4, h5, h6{font-size:100%;font-weight:normal}
+hr{display:none}
+a{color:inherit}
+a, a:link{color:#000;text-decoration:none}
+a:visited{color:#000}
+a:hover, a:active{color:#000;text-decoration:none}
+em, i, address{font-style:normal;font-weight:normal}
+legend, caption{display:none;clear:both}
+input, textarea, select, button, table{font-size:inherit;font-family:inherit;line-height:inherit}
+section, nav, article, aside, hgroup, header, footer{display:block}
+textarea, input{background:url(none);-webkit-apprearance:none}
+textarea{resize:none}
+label{cursor:pointer}
+.bold{font-weight:bold}
+.hidden{position:absolute;left:-1000%;top:0;width:1px;height:1px;overflow:hidden}
+
+

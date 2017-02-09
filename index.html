@@ -1,0 +1,407 @@
+﻿<!DOCTYPE HTML>
+<html lang="ko">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link href="images/app_icon.png" rel="apple-touch-icon-precomposed"  />
+  <link href="images/startup.png" rel="apple-touch-startup-image"/>
+  <link href="css/common.css" rel="stylesheet" type="text/css" />
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <link  href="css/flexslider.css" type="text/css" media="screen" rel="stylesheet"/>
+  
+  
+  <!-- bxSlider CSS file -->
+<link href="css/jquery.bxslider.css" rel="stylesheet" />
+
+
+
+
+
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+
+
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js" language="javascript"></script>
+
+  <script src="js/cookies.js"></script>
+  <script src="js/popUp.js"></script>
+
+
+
+  <!--  아이폰에서 refresh할때 스트롤탑   -->
+  <script>
+// <![CDATA[
+try {
+   window.addEventListener('load', function(){
+    setTimeout(scrollTo, 0, 0, 1); 
+   }, false);
+  } 
+  catch(e) {}
+ // ]]>
+</script>
+
+  <!--  햄버거 메뉴  -->
+  <script> 
+  $(document).ready(function() {
+   $(".btn").toggle(function() {
+   // $("#nav").css("display","block");
+    $("#nav").slideDown("normal");
+   }, function() {
+    //$("#nav").css("display","none");
+	 $("#nav").slideUp("fast");
+   });
+
+   $(window).resize(function(){    //웹브라우저 크기 조절시 반응하는 이벤트 메소드()
+      var screenSize = $(window).width();
+      if( screenSize > 1024){ 
+           $("#nav").show();
+	
+		
+		 
+			
+			
+			
+      }else if(screenSize >900 ){
+          $("#nav").hide();
+		    
+        
+      }
+  });
+
+
+  });
+ </script>
+
+  <!--  서치박스 클릭하면 나옴  -->
+  <script type="text/javascript"> 
+
+  $(document).ready(function() {
+
+   $("#btn1").toggle(function() {
+
+    $("#searchBox").css("display","block");
+
+   }, function() {
+
+    $("#searchBox").css("display","none");
+
+   });
+
+  });
+
+ </script>
+
+  <!--  메인비쥬얼 슬라이더   -->
+
+  <script defer src="js/jquery.flexslider.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      SyntaxHighlighter.all();
+    });
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide"
+      });
+    });
+  </script>
+
+<!-- bxSlider Javascript file -->
+<script src="js/jquery.bxslider.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+  $('.bxslider').bxSlider({
+  minSlides: 2,
+  maxSlides: 2,
+  slideWidth: 259,
+ slideMargin: 10,
+  
+});
+});
+</script>
+
+
+  <!--  익스 html5 지원코드   -->
+  <!--[if lt IE 9]> 
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+  <!--  익스 css3 지원코드   -->
+  <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+  <title>The Los Angeles County Museum of Art</title>
+  </head>
+  <body>
+<div id="wrap">
+<header><!-- 접근성 잡아줌-->
+	<div id="header"><!--익스 6,7잡아줌 -->
+		<div class="headerWrap">
+			<h1><a href="index.html">LACMA LOGO</a></h1>
+			
+			<!-- menu icon for tablet size --> 
+			<a href="#" class="btn">hamburger menu icon</a>
+			<div class="membership"><a href="#0">Join today for unlimited admission to the Museum and other benefits <span class="arrowSm">＞</span></a></div>
+			<div class="topmenuWrap">
+				<div class="topMenu">
+					<ul >
+						<li><a href="#0">Sign in</a>&nbsp;│&nbsp;</li>
+						<li><a href="#0">Register</a>&nbsp;│&nbsp;</li>
+						<li><a href="#0">E-News</a></li>
+					</ul>
+				</div>
+				<!-- /topmenu -->
+				
+				<div class="SNS">
+					<ul>
+						<li class="facebook"><a href="#0" >facebook</a></li>
+						<li class="twitter"><a href="#0" >twitter</a></li>
+						<li class="instagram"><a href="#0" >instagram</a></li>
+						<li class="pinterest"><a href="#0">pinterest</a></li>
+					</ul>
+				</div>
+				<!-- /sns --> 
+				
+				<a href="#" id="btn1"><span class="search_icon">search</span></a> </div>
+			<!-- /topmenuWrap --> 
+			
+		</div>
+		<!-- /headerWrap -->
+		
+		<div id="searchBox"><!-- /클릭하면 나오는 서치박스 -->
+			<form id="search" action="#" method="get">
+				<fieldset>
+					<legend>검색</legend>
+					<div class="bg_search">
+						<div class="wrapBox">
+							<input type="text" name="input_search" class="type_text" title="search" placeholder="Search for artists, artworks, exhibitions..." maxlength="255">
+						</div>
+						
+						<!--wrapBox end-->
+						
+						<input type="submit" id="Btn" class="type_btn" title="search icon">
+					</div>
+					
+					<!--bg_search end-->
+					
+				</fieldset>
+			</form>
+		</div>
+		<h2 class="hidden">global navigation</h2>
+		<div id="nav">
+			<nav>
+				<ul class="mainMenu">
+					<li><a href="#0">VISIT</a></li>
+					<li><a href="#0">EVENTS</a></li>
+					<li><a href="#0">ART</a></li>
+					<li><a href="#0">LEARN</a></li>
+					<li><a href="#0">SHOP</a></li>
+					<li ><a href="#0">ABOUT</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<!-- /header --> 
+	
+</header>
+<div class="visual">
+	<div class="flexslider">
+		<ul class="slides">
+			<li> <a href="#0"><img src="images/1.jpg" alt="Henri Mattise exhibition"/></a> </li>
+			<li> <a href="#0"><img src="images/2.jpg"  alt="Miro exhibition"/></a> </li>
+			<li> <a href="#0"><img src="images/3.jpg" alt="David Hockney exhibition"/></a> </li>
+			<li> <a href="#0"><img src="images/4.jpg" alt="Charles James exhibition"/></a> </li>
+		</ul>
+	</div>
+</div>
+<article>
+<div id="content_left">
+	<div class="hours">
+		<h2><a href="#0">PUBLIC HOURS</a></h2>
+		<p class="weekdays">Mon ~ Tue <br>
+			Wed<br>
+			Thur ~ Friday<br>
+			Sat ~ Sun<br>
+		</p>
+		<p class="fromTo">11am – 5pm<br>
+			Closed<br>
+			11am – 5pm<br>
+			10am – 7pm<br>
+		</p>
+	</div>
+	<div class="ticket">
+		<h2><a href="#0">BUY TICKETS</a></h2>
+		<p class="who"><span class="admission">GENERAL ADMISSION</span><br>
+			Adults<br>
+			Seniors (62+)<br>
+			Members & children </p>
+		<p class="price"> &nbsp;<br>
+			$15<br>
+			$10<br>
+			Free </p>
+	</div>
+	<div class="news">
+		<h2><a href="#0">NEWS INFO</a></h2>
+		<ul>
+			<li><a href="#0">Jasper Johns: Regrets Now</a> Member early hours 9:30–10:30</li>
+			<li><a href="#0"> New in Digital Member</a> Picasso and Matisse gallery talk</li>
+			<li class="lastNews"><a href="#0">Henri Matisse: The Cut-Outs</a> Timed tickets now on sale </li>
+		</ul>
+	</div>
+	<div class="memberAd"><img src="images/membershipAd.jpg" alt="membership ad" width="100%"/></div>
+</div>
+<!-- /content_left   -->
+<div id="main">
+	<div class="exhibitionWrap">
+		<h2><a href="#0">CURRENT EXHIBITIONS</a></h2>
+		<ul>
+			<li class="exhibition1"> <a href="#0">
+			 <div class="exThumb"> <img src="images/current1.jpg" alt="Renoir" width="100%"/> </div> 
+			 <div class="exCaption"> 
+			 <span class="category">SPECIAL</span> 
+			 <h3>Renoir Paintings in the 20th Century</h3>
+			<p>Renoir in the 20th Century focuses on the last three decades of Renoir’
+					s career, when, following his rupture with impressionism.</p>
+					<span class="date">Through Sep 1, 2015</span>
+				</div> </a> 
+				</li>
+				
+				
+				
+				
+			<li  class="exhibition2"> <a href="#0">
+			  <div class="exThumb"><img src="images/current2.jpg" alt="James Turrell, Breathing Light" width="100%"/></div>
+			  <div class="exCaption"> 
+			  
+			   <span class="category">COMING SOON</span>
+				<h3>James Turrell, 
+					Breathing Light</h3>
+				<p>James Turrell, considered one of the most important artists of the Southern California Light and Space movement, was born in LA.</p>
+					<span class="date">Through Dec 15, 2015</span>
+					</div>
+				</a> </li>
+		</ul>
+	</div>
+	<!-- /exhibition  -->
+	
+	<div class="eventWrap">
+		<h2><a href="#0">EVENTS</a></h2>
+		<ul>
+			<li class="event1"> <a href="#0"> 
+			<div class="exThumb">
+			<img src="images/event1.jpg" alt="free tours" width="100%"/>
+			</div>
+			
+			<div class="exCaption"> 
+			 <span class="category">TOURS</span>
+				<h3>Free public tours of exhibitions </h3>
+				
+	
+				<span class="date">Aug 28, 2015  |  1 pm</span>
+				</div>
+				</a></li>
+			<li class="event2"> <a href="#0"> 
+			
+			<div class="exThumb">
+			<img src="images/event2.jpg" alt="talks" width="100%"/>
+			</div>
+			<div class="exCaption"> 
+			 <span class="category">TALKS</span>
+				<h3>Life Drawing with Jazz Talks</h3>
+				
+			
+				<span class="date">Sep 4, 2015  |  10 am</span>
+				</div>
+				</a></li>
+			<li class="event3"> <a href="#0">
+				<div class="exThumb">
+			 <img src="images/event3.jpg" alt="lectures" width="100%"/>
+			 </div>
+			 		<div class="exCaption"> 
+			  <span class="category">LECTURES</span>
+				<h3>Engage with art in new ways</h3>
+			
+		
+				<span class="date">Mar 14, 2015  |  11 am</span>
+				</div>
+				</a></li>
+		</ul>
+	</div>
+	<!-- /events  --> 
+</div>
+<!-- /main   -->
+
+<div id="content_right">
+	<div class="shopWrap">
+		<h2><a href="#0">ART SHOP</a></h2>
+		<div class="shopImg"><a href="#0"> <img src="images/artShop.jpg" alt="art poster" width="100%"/></a> </div>
+		<div class="shopCopy"> <a href="#0"><span class="category">WHAT'S NEW</span>
+			<h3>Alexander Calder 'LA Museum of Art' Poster</h3>
+			<span class="date">Member Price - $9.00</span> </a> </div>
+	</div>
+	<!-- /shop   -->
+	
+	<div class="kids">
+		<h2><a href="#0">FOR KIDS</a></h2>
+		<div class="kidsImg"><a href="#0"><img src="images/kids.jpg" alt="kids program" width="100%"/></a></div>
+		<div class="kidsCopy"> <a href="#0"> <span class="category">EDUCATION</span>
+			<h3>WINTER ART CAMP: Children ages 6 to 8</h3>
+			<P>Spend an exciting week with paint, clay, found objects! <span class="date">4 Day Workshops | 10 am–3 pm</span> </P>
+			</a> </div>
+		<!-- /kids   --> 
+		
+	</div>
+	<!-- /content_right   -->
+	
+	</article>
+	<footer>
+		<div id="footer">
+			<ul>
+				<li><a href="#0">Accessibility</a> </li>
+				<li><a href="#0"> Site Index </a> </li>
+				<li><a href="#0"> Terms &amp; Conditions </a> </li>
+				
+				<li><a href="#0"> Press</a> </li>
+			</ul>
+			<address>
+			Tel: 323 857-6000 &nbsp;  | &nbsp;   5905 Wilshire Boulevard Los Angeles, CA 90036 &nbsp;  | &nbsp;    Email: publicinfo@lacma.org
+			</address>
+			<p>© 2000–2015&nbsp;   LACMA &nbsp; All Rights Reserved. </p>
+		</div>
+	</footer>
+</div>
+<!-- /wrap   -->
+
+
+
+ <!--			 http://qr.naver.com/  -->
+
+	<div id="popWrap">
+		<h3><img src="images/megaph.png" alt="아이콘">NOTICE</h3>
+		<div class="qrwrap">
+			<p class="popdesc">
+				<span>"This website is created only for the personal portfolio not for commercial uses. Some images and contents found on this website originally came from others."</span>
+			</p>
+		
+			
+			
+		
+		</div>
+		
+		<p class="todayclose">
+			<input type="checkbox" id="subpop" name="subpop" 
+				title="close for the day" onclick="controlCookies();"/>
+			<label for="subpop">close pop-up for the day</label>
+			<a href="#"  onclick="controlCookies(); return false;">CLOSE</a>
+		</p>
+		
+	</div>
+ <!--			 http://qr.naver.com/  END-->
+
+
+</body>
+</html>

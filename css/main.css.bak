@@ -1,0 +1,603 @@
+@charset "utf-8";
+
+/*   ---------------------      하루동안 열지않기  popup창  -------------------------------    */
+#popWrap{width:360px; padding:50px; text-align:center; 
+	position:fixed; top:0; left:0; background-color:rgba(0,0,0, 0.8); color:white;
+	font-size:15px;
+	z-index:3; }
+
+.todayclose a{color:white; display:inline-block; width:70px; height:25px; background-color:#c30029; margin-left:10px; text-align:center; line-height:25px; font-size:12px;letter-spacing:1px; }
+#popWrap h3{  cursor:move; font-size:30px; letter-spacing:3px;  color:white; font-weight:normal;  
+padding-bottom:25px; border-bottom:5px solid #C30029; }
+#popWrap h3 img{margin-right:10px;}
+#popWrap .qrwrap{overflow:hidden;
+}
+
+#popWrap .popdesc{line-height:22px; width:100%;  text-align:center; 
+ margin-top:-5px; padding-top:10px; }
+#popWrap .popdesc span{display:block;     padding: 10px; 
+ }
+
+#popWrap .todayclose input{vertical-align:middle; }
+
+
+
+
+
+/* basic layout structure*/
+
+/* 와이드 피씨 기준이 되므로 미디아 쿼리 필요 없음  */
+#wrap {
+	width:1200px;
+	margin:0 auto;
+}
+#header {
+	width:100%;
+}
+.visual {
+	width:100%;
+	padding:3% 0;
+	border-bottom:4px solid #000;
+	border-top:4px solid #000;
+	margin-bottom:30px;
+}
+article {
+	overflow:hidden;
+	position:relative;
+}
+#content_left {
+	width:280px;
+	float:left;
+	padding-right:3%;
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+#main {
+	margin:0 280px 0 280px;
+	padding:0 3%;
+	border-right:1px solid #000;
+	border-left:1px solid #000;
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+#content_right {
+	width:280px;
+	position:absolute;
+	top:0;
+	right:0;
+	padding-left:3%;
+}
+footer {
+	width:100%;
+	margin-top:30px;
+	border-top:4px solid #000;
+}
+/* layout details */
+#header .headerWrap {
+	position:relative;
+	overflow:hidden;
+}
+#header h1 {
+	margin:30px 0;
+}
+#header h1 a {
+	display:block;
+	width:211px;
+	height:76px;
+	background:url(../images/logo_lacma.jpg)0 0 no-repeat;
+	text-indent:-9999px;
+	overflow:hidden;
+	margin:0 auto;
+}
+#header .btn {
+	display:none;
+}
+#header .membership {
+	width:327px;
+	height:76px;
+	position:absolute;
+	top:30px;
+	left:0;
+	background:url(../images/ad_member.jpg) top right no-repeat #000;
+}
+#header .membership a {
+	color:#fff;
+	margin:12px 130px 0px 20px;
+	display:block;
+	font-family:'Roboto';
+	font-size:14px;
+	line-height:1.25em;
+}
+#header .membership a .arrowSm {
+	font-size:10px;
+}
+#header .topmenuWrap {
+	width:240px;
+	position:absolute;
+	top:32px;
+	right:0;
+	overflow:hidden;
+}
+#header .topMenu {
+	float:right;
+}
+#header .topMenu li {
+	display:inline;
+	font-family:'Roboto';
+	font-size:13px;
+}
+#header .SNS {
+	float:left;
+	margin-top:10px;
+	margin-left:12px;
+}
+#header .SNS li {
+	width:30px;
+	float:left;
+}
+#header .SNS li {
+	float:left;
+	margin-right:20px;
+}
+#header .SNS .pinterest {
+	margin-right:10px;
+}
+#header .SNS a {
+	display:block;
+	width:30px;
+	height:30px;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+#header .SNS .facebook a {
+	background:url(../images/sns_face.jpg) no-repeat;
+}
+#header .SNS .twitter a {
+	background:url(../images/sns_twitter.jpg) no-repeat;
+}
+#header .SNS .instagram a {
+	background:url(../images/sns_insta.jpg) no-repeat;
+}
+#header .SNS .pinterest a {
+	background:url(../images/sns_pine.jpg) no-repeat;
+}
+#nav {
+	clear:both;
+	border-top:#000 4px solid;
+	height:60px;
+	line-height:55px;
+}
+#nav ul {
+	overflow:hidden;
+}
+#nav ul li {
+	width:16.66%;
+	float:left;
+	text-align:center;
+}
+#nav li a {
+	font-family: 'Roboto Condensed';
+	font-weight:700;
+	letter-spacing:0.005em;
+	font-size:1.75em;
+}
+#nav li a:hover {
+	color:#e41b23;
+}
+/* search  icon */
+
+#header #btn1 {
+	display:block;
+	width:34px;
+	height:30px;
+	text-indent:-9999px;
+	background:url(../images/searchBTN.jpg) no-repeat;
+	margin-top:10px;
+	float:right;
+}
+/* search  box */
+#searchBox {
+	display:none;
+	width:100%;
+	clear:both;
+	overflow:hidden;
+}
+#searchBox fieldset {
+	border:1px solid #000;
+}
+#searchBox .bg_search {
+	position:relative;
+}
+#searchBox .wrapBox input.type_text {
+	width:90%;
+	height:36px;
+	color:#444;
+	border:0 none;
+}
+#searchBox input.type_btn {
+	position:absolute;
+	top:0;
+	right:0px;
+	display:block;
+	width:41px;
+	height:36px;
+	background:url(../images/searchBTN2.jpg) no-repeat center #000;
+	background-size:34px 30px;
+	border:none;
+	border-left:1px solid #000;
+	text-indent:-500em;
+}
+#searchBox input[placeholder] {
+	color:#ccc;
+	font-weight:normal;
+	margin-left:15px;
+	font-size:13px;
+}
+/* 본문 contents  */
+	
+h2 {
+	font-family: 'Roboto Condensed';
+	font-weight:700;
+	font-size:2em;
+	margin:30px 0;
+	letter-spacing:0.03em;
+}
+#content_left .hours h2, #main .exhibitionWrap h2, #content_right .shopWrap h2 {
+	margin-top:0;
+}
+#content_left .weekdays {
+	width:50%;
+	float:left;
+}
+#content_left .fromTo {
+	width:50%;
+	float:left;
+	text-align:right;
+}
+#content_left .hours, #content_left .ticket, #content_left .news {
+	overflow:hidden;
+	border-bottom:1px solid #000;
+	padding-bottom:30px;
+}
+#content_left .memberAd img {
+	vertical-align:top;
+}
+#content_left .who {
+	width:70%;
+	float:left;
+}
+#content_left .price {
+	width:30%;
+	float:left;
+	text-align:right;
+}
+#content_left .admission {
+	font-family: 'Roboto';
+	color:#e41b23;
+	font-weight:700;
+}
+#content_left .news li {
+	margin-bottom:4%;
+}
+#content_left .news li a {
+	display:block;
+	font-weight:700;
+}
+#content_left li.lastNews {
+	margin-bottom:0;
+}
+/* main  */
+
+	
+
+#main .exhibitionWrap {
+	overflow:hidden;
+	border-bottom:1px solid #000;
+	padding-bottom:30px;
+}
+#main .exhibitionWrap h3 {
+	font-size:28px;
+	line-height:1.25em;
+	margin-bottom:2%em;
+}
+#main .exhibition1 {
+	width:47.5%;
+	float:left;
+	margin-right:5%;
+}
+#main .exhibition2 {
+	width:47.5%;
+	float:left;
+}
+#main .category {
+	font-family: 'Roboto';
+	color:#e41b23;
+	font-weight:700;
+	margin-top:1em;
+	display:block;
+}
+#main .date {
+	color:#999;
+	display:block;
+}
+#main .eventWrap {
+	overflow:hidden;
+}
+#main .eventWrap li {
+	width:31%;
+	float:left;
+}
+#main .eventWrap .event1 {
+	margin-right:3.5%;
+}
+#main .eventWrap .event2 {
+	margin-right:3.5%;
+}
+#main .eventWrap h3 {
+	font-size:20px;
+	line-height:1.25em;
+}
+/*  content right  */
+#content_right .shopWrap {
+	border-bottom:1px solid #000;
+	padding-bottom:30px;
+}
+#content_right h3 {
+	font-size:20px;
+	line-height:1.25em;
+}
+#content_right .category {
+	font-family: 'Roboto';
+	color:#e41b23;
+	font-weight:700;
+	margin-top:1em;
+	display:block;
+}
+#content_right .date {
+	color:#999;
+	display:block;
+}
+#content_right .kids {
+}
+/*  footer  */
+#footer {
+	text-align:center;
+	padding:30px 0;
+}
+#footer li {
+	display:inline;
+	padding:1.5%;
+	font-size:14px;
+	font-family: 'Roboto';
+}
+#footer address {
+	margin-top:0.75%;
+	font-size:13px;
+}
+#footer p {
+	font-size:13px;
+}
+
+
+/* mediaquery transtorms */
+
+@media screen and (max-width:1280px) { /* 일반 피씨  */
+#wrap {
+	width:95%;
+	margin:0 auto;
+}
+}
+ @media screen and (max-width:1024px) {/* 태블릿 중 사이즈  */
+#header .membership {
+	display:none;
+}
+#header .topMenu {
+	display:none;
+	height:0;
+}
+#header .SNS {
+	display:none;
+	height:0;
+}
+#header h1 {
+	margin:20px 0;
+}
+#header h1 a {
+	width:160px;
+	height:61px;
+	background-size:160px 61px;
+}
+/* 햄버거메뉴  */
+#header .btn {
+	display:block;
+	position:absolute;
+	top:50%;
+	left:0;
+	margin-top:-14px;
+	width:34px;
+	height:30px;
+	text-indent:-9999px;
+	background:url(../images/menu.jpg) no-repeat;
+}
+/* search */
+#searchBox {
+	display:none;
+}
+#header .topmenuWrap {
+	width:auto;
+	top:50%;
+	margin-top:-14px;
+}
+#header #btn1 {
+	margin-top:0;
+}
+#nav {
+	display:none;
+	height:auto;
+	line-height:normal;
+	border-top:3px solid #000;
+}
+#nav ul {
+	overflow:auto;
+}
+#nav ul li {
+	border-top:1px solid #000;
+	text-align:center;
+	padding:12px 0;
+	font-weight:bold;
+	float:left;
+	width:50%;
+}
+#nav ul li a {
+	font-size:1.5em;
+}
+#main {
+	margin:0 0 0 280px;
+	border-right:none;
+	padding-right:0;
+}
+#content_right {
+	margin:0 0 0 280px;
+	width:auto;
+	position:relative;
+	overflow:auto;
+	padding-left:3%;
+	padding-right:0%;
+	border-left:1px solid #000;
+}
+#content_right .shopWrap {
+	margin-top:30px;
+	border-top:1px solid #000;
+	padding:30px 0;
+	overflow:hidden;
+}
+#content_right .shopWrap .shopImg {
+	width:30%;
+	float:left;
+	margin-right:4%;
+}
+#content_right .shopWrap .shopCopy {
+	margin-left:34%;
+}
+#content_right .kids {
+	overflow:hidden;
+	
+}
+#content_right .kids .kidsImg {
+	width:30%;
+	float:left;
+	margin-right:4%;
+}
+#content_right .kids .kidsCopy {
+	margin-left:34%;
+}
+
+
+#content_right .category{
+
+margin:0 0 10px 0;
+	line-height:12px;
+}
+ @media screen and (max-width:640px) {
+#wrap {
+	width:94%;
+	margin:0 auto;
+}
+#header h1 a {
+	width:120px;
+	height:46px;
+	background-size:120px 46px;
+}
+#nav ul li a {
+	font-size:1.25em;
+}
+#main {
+	border-left:0;
+	margin:0;
+	clear:both;
+	padding:0;
+	border-top:1px solid #000;
+	padding-top:30px;
+	margin-top:30px;
+}
+#main .category, #content_right .category {
+	margin:0 0 10px 0;
+	line-height:12px;
+}
+#main .exhibitionWrap {
+	border-bottom:1px solid #000;
+	padding-bottom:30px;
+}
+#main .exhibitionWrap h3 {
+	font-size: 20px;
+	line-height: 1.25em;
+}
+#main .exhibition1, #main .exhibition2 {
+	width:100%;
+	float:none;
+	overflow:hidden;
+}
+#main .exhibition2 {
+	margin-top:30px;
+}
+#main .exhibition1 .exThumb,  #main .exhibition2 .exThumb,  #main .event1 .exThumb,  #main .event2 .exThumb,  #main .event3 .exThumb {
+	width:30%;
+	margin:0 4% 0 0;
+	float:left;
+}
+#main .exhibition1 .exCaption, #main .exhibition2 .exCaption, #main .event1 .exCaption, #main .event2 .exCaption, #main .event3 .exCaption {
+	margin-left:34%;
+}
+#main .eventWrap h3 {
+	font-size: 20px;
+	line-height: 1.25em;
+}
+#main .eventWrap li {
+	width:100%;
+
+	
+	clear:both;
+	
+}
+
+
+
+
+#main .eventWrap .event1 {
+	margin-right:0;
+}
+#main .eventWrap .event2 {
+	margin:30px 0;
+}
+#content_right {
+	margin:0;
+	border-left:none;
+	padding-left:0;
+}
+#content_left {
+	width:100%;
+	padding:0;
+}
+#content_left .memberAd {
+	display:none;
+}
+
+/*  footer  */
+
+
+#footer address {
+	display:none;
+}
+
+}
+ @media screen and (max-width:480px) {
+#wrap {
+	min-width:320px;
+}
+}

@@ -1,0 +1,101 @@
+/* CSS Document */
+/* 와이드 피씨 기준이 되므로 미디아 쿼리 필요 없음  */
+#wrap {
+	width:1200px;
+	margin:0 auto;
+}
+#header {
+	width:100%;
+}
+.visual {
+	width:100%;
+	padding:3% 0;
+	border-bottom:4px solid #000;
+	margin-bottom:3%;
+}
+article {
+	overflow:hidden;
+	position:relative;
+}
+#content_left {
+	width:280px;
+	float:left;
+	padding-right:3%;
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+#main {
+	margin:0 280px 0 280px;
+	padding:0 3%;
+	border-right:1px solid #000;
+	border-left:1px solid #000;
+	box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+#content_right {
+	width:280px;
+	position:absolute;
+	top:0;
+	right:0;
+	padding-left:3%;
+}
+footer {
+	width:100%;
+	margin-top:3%;
+	border-top:4px solid #000;
+}
+ @media screen and (max-width:1280px) { /* 일반 피씨  */
+#wrap {
+	width:95%;
+	margin:0 auto;
+}
+#nav li a {
+	font-size:1em;
+	margin:none;
+	color:green;
+	background:orange;
+}
+#header .membership {
+	display:none;
+}
+}
+ @media screen and (max-width:1024px) {/* 태블릿 중 사이즈  */
+#wrap {
+	width:100%;
+}
+#main {
+	margin:0 0 0 280px;
+	border:none;
+}
+#content_right {
+	margin:0 0 0 280px;
+	width:auto;
+	position:relative;
+	overflow:auto;
+	padding-bottom:10px;
+}
+}
+ @media screen and (max-width:640px) {
+#main {
+	border-left:0;
+	margin:0;
+	clear:both;
+}
+#content_right {
+	margin:0;
+}
+#content_left {
+	width:100%;
+}
+}
+ @media screen and (max-width:480px) {
+#wrap {
+	min-width:320px;
+}
+}
